@@ -1,0 +1,59 @@
+{
+  "name": "vseotzivu",
+  "version": "1.0.0",
+  "description": "Reviews",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app.js",
+    "server": "nodemon server.js",
+    "frontend": "npm run start --prefix frontend",
+    "frontend:install": "npm install --prefix frontend",
+    "frontend:build": "npm run build --prefix frontend",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run frontend\"",
+    "ssr:build": "babel SSR.js -d ssr"
+  },
+  "keywords": [
+    "franchise",
+    "reviews"
+  ],
+  "author": "Artem Platonov <platonovartem.workup@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.2",
+    "cyrillic-to-translit-js": "^3.1.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "mongoose": "^5.10.9",
+    "node-fetch": "^2.6.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-infinite-scroll-component": "^5.1.0",
+    "react-intersection-observer": "^8.29.1",
+    "react-redux": "^7.2.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.1",
+    "react-simple-infinite-loading": "^1.1.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^5.0.0",
+    "nodemon": "^2.0.6",
+    "style-loader": "^2.0.0",
+    "transform-runtime": "0.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
