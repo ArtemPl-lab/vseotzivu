@@ -1,0 +1,15 @@
+.modal.show{
+    z-index: 500; 
+}
+.modal{
+    display: block;
+    z-index: -1;
+    transition: all .15s linear;
+}
+.modal-backdrop{
+    display: none;
+}
+.modal-backdrop.show{
+    z-index: 100;
+    display: block;
+}
